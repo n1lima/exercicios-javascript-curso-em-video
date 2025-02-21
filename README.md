@@ -16,4 +16,4 @@ Os exercícios estão organizados por tópicos do curso e podem incluir:
 ## Como rodar os exercícios
 1. Clone o repositório.
    ```bash[[
-   git clone https://github.com/n1lima/cursoEmVideoJS.git
+   git clone https://github.com/n1lima/exercicios-javascript-curso-em-video.git

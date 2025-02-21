@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Multas</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 10px;
+            background-color: grey;
+            font: normal 15px arial;
+        }
+        div#multa{
+            margin-left: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="velocidade" id="velocidade"> Km/h
+    <input type="button" value ="Verificar" onclick="calcular()">
+    <div id = "multa"></div>
+
+    <script>
+        function calcular(){
+            velocidade = document.querySelector('input#velocidade').value
+                if (velocidade > 60){
+                    document.querySelector('div#multa').innerHTML = `<p>Você ultrapassou a velocidade <strong>recomendada</strong></p>. Irá receber uma multa!!`
+                    document.querySelector('div#multa').innerHTML += `Dirija sempre com segurança!!`
+                }else{
+                    document.querySelector('div#multa').innerHTML = `<p>Você não ultrapassou a velocidade. <strong>Parabéns!</strong></p>`
+                    document.querySelector('div#multa').innerHTML += `Dirija sempre com segurança!!`
+                } 
+        }
+    </script>
+</body>
+</html>

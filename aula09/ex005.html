@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(249, 201, 231);
+            color:aliceblue;
+            font:normal 15pt 'Comic Sans MS';
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div id = "msg">Clipe em mim</div>
+    <script>
+        /* --- POR MARCA ---
+        window.document.write(window.document.charset) -para buscar configurações da minha pág
+        window.document.write(window.navigator.appName)
+        window.document.write(window.document.URL)
+        
+        --- OUTRO EXEMPLO ---
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+       // window.document.write('está escrito assim: ' + p1.innerText)
+       p1.style.color = 'yellow'
+       corpo.style.background = 'pink'
+       window.document.write(p1.innerHTML)
+       */
+
+       /* --- POR ID -- 
+       (o legal de usar ID, eh pq por exemplo o elemento div pode ter muitos durante o 
+       codigo, entao nada mais simples do que dar "nome", um id para cada um, e entao so
+       selecionar ele para mudar algo no script)
+
+        <div id = "msg">Clipe em mim</div> //O comando utilizado do html
+
+       --- 1º EXEMPLO ---
+       var d = window.document.getElementById('msg')
+       d.style.background = 'green'
+       d.innerText = 'estou aguradando...'
+
+       
+       --- 2º EXEMPLO ---
+       document.getElementById('msg').style.background = 'green'//isso se utiliza se vc so for utiliza o elemento uma vez
+       document.getElementById('msg').innerText = 'estou aguardando...'//nao precisa colocar window, em qualquer comando!!!
+       */
+
+       /* --- POR NOME --- 
+
+        <div name = "msg">Clipe em mim</div> //O comando utilizado do html
+        
+       var d = window.document.getElementsByName('msg')[0]//como esta no plural precisa colocar a posicao do elemento
+       d.innerText = 'Olá!'
+       */
+      
+      /* --- POR CLASS --- 
+
+        <div class = "msg">Clipe em mim</div> //O comando utilizado do html
+
+        var d = window.document.getElementsByClassName('msg')[0] //ta no plural tbm
+        d.innerText = 'ola'
+        */
+
+        /* --- POR SELETOR ---*/
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'green'
+ 
+    </script>
+</body>
+</html>

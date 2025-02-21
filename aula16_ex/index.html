@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Números</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div class="input-container">
+
+            Número (entre 1 a 100): <input type="number" id="numero" placeholder="digite aqui">
+            <input type="button" value="Adicionar" onclick="inserindoNum()">
+
+        </div>
+
+        <div class="output-container">
+
+            <select id="opcoes" name="opcoes" size = 10>
+                <option>Números selecionados:</option>
+            </select>
+        
+            <p><input type="button" value="Finalizar" onclick="finalizar()"></p>
+            <p id="saida"></p>
+        </div>
+    </section>
+    <footer>&copy;BrocolisEhBom</footer>
+    <script src="main.js"></script>
+    
+</body>
+</html>

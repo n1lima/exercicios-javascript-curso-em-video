@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cálculo</title>
+    <style>
+        body{
+            font: normal 12pt arial;
+            background-color:rgb(242, 250, 215);
+        }
+        p{
+           background: rgb(194, 193, 189); 
+        }
+        input{
+            font: normal 10pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+        div#res1{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora +/-</h1>
+
+    <p><strong>soma:</strong></p>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id = "res">Resultado</div>
+
+    <p><strong>subtração:</strong></p>
+    <input type="number" name="txtn3" id="txtn3"> -
+    <input type="number" name = "txtn4" id="txtn4"> 
+    <input type="button" value="Subtração" onclick="subtracao()">
+    <div id = "res1">Resultado</div>
+    
+    <script>
+        function somar(){
+            const tn1 = document.getElementById('txtn1')
+            const tn2 = document.getElementById('txtn2')
+            const res = document.getElementById('res')
+            const n1 = Number(tn1.value)
+            const n2 = Number(tn2.value)// Como o valor do elemento tn1 é uma string, aqui estamos convertendo-o para um número.
+            const result = n1 + n2 // Aqui estamos somando n2 de n1 e armazenando o resultado na variável result.
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${result}</strong>`
+            //// Aqui estamos atualizando o conteúdo HTML da div res com o texto que mostra o resultado da subtração.
+
+        }
+
+        function subtracao(){
+            const tn1 = document.querySelector('input#txtn3'); // Aqui estamos selecionando o elemento input com o id 'txtn3' e atribuindo-o à variável tn1.
+            const tn2 = document.querySelector('input#txtn4'); // Aqui estamos selecionando o elemento input com o id 'txtn4' e atribuindo-o à variável tn2.
+            const res = document.querySelector('div#res1'); // Aqui estamos selecionando o elemento div com o id 'res1' e atribuindo-o à variável res.
+            const n1 = Number(tn1.value)
+            const n2 = Number(tn2.value)
+            const result = n1 - n2
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${result}</strong>`
+        }
+    </script>
+</body>
+</html>

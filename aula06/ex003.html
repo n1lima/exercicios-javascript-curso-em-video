@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first program</title>
+    <style>
+        body {
+            background-color: #3a6a5a;
+            color: white;
+            font: normal 10pt arial;
+        }
+        h1 {
+            color: rgb(175, 40, 40);
+        }
+    </style>
+</head>
+<body>
+    <h1>olá mundo</h1> 
+    <p>me livrei da maldição</p>
+    <script>
+      var num1 = Number.parseFloat(prompt('digite o primeiro número: '))//o window.prompt ele converte automatico para uma string, por isso precisamos converter
+      var num2 = Number(window.prompt('digite o segundo número: '))
+        //Number (n) versão mais atualiza, que identifica sozinha para qual tipo precisa converter, já o Number.parseInt (n), voce diz para qual tipo converter 
+      var resultado = num1 + num2//se nao convertemos aqui, iremos concatenar apenas duas strings, e nao somar!!
+      window.alert(`a soma entra ${num1} e ${num2} eh igual a ${resultado}`)// a função do + aqui é para concatenar
+    </script>
+</body>
+</html>

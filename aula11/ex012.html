@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font: normal 18px arial;
+            margin-left: 20px;
+        }
+        div#resultado{
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        p{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificando sua nacionalidade</h1>
+    <p><strong>Escreva qual país você é, Brasil ou EUA</strong></p>
+    <input type="text" id="pais" placeholder="Digite seu país aqui">
+    <input type="button" value="verificar" onclick="verificador()">
+    <div id="resultado">Sua Nacionalidade:</div>
+
+    <script>
+        function verificador(){
+            const pais = document.querySelector('input#pais').value /*No JavaScript, a propriedade .value é usada para obter o valor de um elemento de formulário, 
+            independentemente de ser um número ou uma string. Ela funciona 
+            para todos os tipos de campos de entrada (input), como texto, senha, número, etc. */
+                if (pais == 'Brasil'){
+                    document.querySelector('div#resultado').innerHTML = 'Você é Brasileira'
+                } else{
+                    document.querySelector('div#resultado').innerHTML = 'Você é Estadunidense'
+                }
+        }
+    </script>
+    
+</body>
+</html>

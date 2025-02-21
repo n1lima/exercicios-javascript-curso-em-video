@@ -1,0 +1,24 @@
+let num = [8,5,3]
+num[3] = 9
+num.push(7)
+num.push(4)
+num.sort()
+
+console.log(num)
+//console.log(num.length)
+
+    //percurso do vetor
+  /*  for(let i = 0; i<num.length; i++){
+        console.log(`a posição ${i} tem o valor ${num[i]}`)
+    }*/
+
+    //percurso simplicado
+    /*for(let i in num){//para cada posicao dentro de num
+        console.log(num[i])
+    }*/
+   let i= num.indexOf(8)
+   if(i == -1){
+    console.log('posicao nao encontrada')
+   }else{
+     console.log(i);
+   }

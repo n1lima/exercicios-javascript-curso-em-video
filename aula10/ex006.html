@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!--- <meta http-equiv="refresh" content="1.0"> --->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        div#area{
+            font: normal 15pt 'comic Sans MS';
+            background: pink;
+            color: grey;
+            width: 200px; 
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'area'>
+        interajaaaa...
+    </div>
+
+    <script>
+
+        function clicar(){
+            div.addEventListener('click', clicar)
+
+           const div = document.querySelector('div#area')
+           div.innerText = 'cliicouuu eba!!!'
+           div.style.background = "green"
+
+          /*var a = window.document.getElementById('area')
+          a.innerText = 'clicouu eba!!!'*/
+        }
+
+        function entrar(){
+            div.addEventListener('mouseenter', entrar)
+
+            document.getElementById('area').innerText = 'entrouu eba!!'
+        }
+
+        function sair(){
+            div.addEventListener('mouseout', sair)
+
+            document.querySelector('div#area').innerText = 'saiu ;( nada de eba'
+            document.querySelector('div#area').style.background = 'pink'
+        }
+
+    </script>
+</body>
+</html>
